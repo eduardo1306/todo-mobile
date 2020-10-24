@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react';
 
 import Header from '../../components/Header';
 import {
@@ -35,15 +35,8 @@ const Todo: React.FC = () => {
       .then(response => setTodos(response.data));
   }, []);
 
-  const handleDeleteTodo = useCallback((todoId: number) => {
-    api.delete(`/todo/${todoId}`).then(() => {
-      setTodos(todos.filter(todo => todo.id !== todoId))
-    });
-
-  }, []);
-
   const handleHasFinishedTasks = useMemo((): JSX.Element => {
-    if(todos){
+    if(todos.length > 0){
       const finishTasks = todos.filter(todo => todo.hasFinished);
       const unfinishTasks = todos.filter(todo => !todo.hasFinished);
 
@@ -58,7 +51,7 @@ const Todo: React.FC = () => {
           {" - "}takes done
           </ProgressStatisticText>
         </>
-      )
+      );
     } else {
       return (
         <ProgressStatisticText>
@@ -66,7 +59,7 @@ const Todo: React.FC = () => {
         </ProgressStatisticText>
       );
     }
-  }, [])
+  }, [todos])
 
   return (
     <Container>
@@ -83,6 +76,7 @@ const Todo: React.FC = () => {
         </ProgressStatisticContent>
       </ProgressCard>
       <TodoList
+        showsVerticalScrollIndicator={false}
         data={todos}
         keyExtractor={todo => String(todo.id)}
         renderItem={({ item: todo }) => (
