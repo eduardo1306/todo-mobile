@@ -16,8 +16,7 @@ export const Container = styled.View<IContainerProps>`
   border-radius: 8px;
   margin: 15px 10px 0 0;
   background: ${
-    props => props.backgroundColorHex ?
-      props.backgroundColorHex : '#1d3557'
+    props => props.backgroundColorHex ? props.backgroundColorHex : '#1d3557'
   };
 `;
 

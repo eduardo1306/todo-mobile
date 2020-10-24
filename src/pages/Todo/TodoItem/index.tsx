@@ -1,22 +1,19 @@
 import React from 'react';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
-import { AntDesign } from '@expo/vector-icons';
 
 import {
    Container,
    TodoCard,
-   HoursText,
    TodoSubtitle,
    TodoTitle,
    HashtagContainer,
-   TaskHourContent,
    TaskInformationContent,
 } from './styles';
 
-import RightActions from '../../actions/RightActions';
+import RightActions from '../../../actions/RightActions';
 import TodoHashtag from '../TodoHashtag';
 
-import { ITodo } from '../../pages/Todo';
+import { ITodo } from '../index';
 
 interface ITodoItemProps {
   todo: ITodo;
@@ -37,14 +34,12 @@ const TodoItem: React.FC<ITodoItemProps> = ({ todo }) => {
               <TodoHashtag
                 key={item.id}
                 title={item.title}
+                backgroundColorHex={item.hashtagBackgroundColor}
+                textColorHex={item.hashtagColorFont}
               />
             ))}
             </HashtagContainer>
           </TaskInformationContent>
-          <TaskHourContent>
-            <AntDesign name="clockcircleo" size={27} color="#212529" />
-            <HoursText>{" - "}{todo.hour}</HoursText>
-          </TaskHourContent>
         </TodoCard>
       </Swipeable>
     </Container>

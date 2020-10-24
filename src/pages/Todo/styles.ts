@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { FlatList } from 'react-native';
 
 import { ITodo } from './index';
@@ -7,6 +8,26 @@ export const Container = styled.View`
   flex: 1;
   background: #a8dadc;
 `;
+
+export const Header = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  justify-content: space-between;
+  align-items: center;
+  background: #a8dadc;
+
+  padding: 24px;
+  padding-top: ${getStatusBarHeight() + 24}px;
+`;
+
+export const AvatarImage = styled.Image`
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+`;
+
+export const CreateTodoButton = styled.TouchableOpacity``;
 
 export const AppTitle = styled.Text`
   font-size: 36px;

@@ -4,6 +4,7 @@
       "id": 1,
       "title": "UI/UX reunion",
       "subtitle": "Color palletes and prototype for mobile app",
+      "hasFinished": false,
       "hashtags": [
         {
           "id": 1,
@@ -17,167 +18,106 @@
           "id": 3,
           "title": "Design"
         }
-      ],
-      "hour": "09:00",
-      "available": false
+      ]
     },
     {
       "id": 2,
       "title": "Supermarket",
       "subtitle": "Buy chocolates",
+      "hasFinished": false,
       "hashtags": [
         {
           "id": 1,
-          "title": "Market"
+          "title": "Market",
+          "hashtagColorFont": "#e9c46a",
+          "hashtagBackgroundColor": "#e63946"
         },
         {
           "id": 2,
-          "title": "Food"
+          "title": "Food",
+          "hashtagColorFont": "#f1faee",
+          "hashtagBackgroundColor": "#f77f00"
         },
         {
           "id": 3,
-          "title": "Junk Food"
+          "title": "Junk Food",
+          "hashtagColorFont": "#8d99ae",
+          "hashtagBackgroundColor": "#ef233c"
         }
-      ],
-      "hour": "16:00",
-      "available": false
+      ]
     },
     {
       "id": 3,
       "title": "Run on the beach",
       "subtitle": "Run 5 kilometers",
+      "hasFinished": false,
       "hashtags": [
         {
           "id": 1,
-          "title": "Sport"
+          "title": "Sport",
+          "hashtagColorFont": "#caf0f8",
+          "hashtagBackgroundColor": "#03045e"
         },
         {
           "id": 2,
-          "title": "Health"
+          "title": "Health",
+          "hashtagColorFont": "#3d405b",
+          "hashtagBackgroundColor": "#f2cc8f"
         }
-      ],
-      "hour": "18:00",
-      "available": true
+      ]
     },
     {
-      "id": 4,
-      "title": "Bar do Tijuca",
-      "subtitle": "Drink a beer with John Doe",
+      "title": "Jogar",
+      "subtitle": "50 minutos de CS",
+      "hasFinished": false,
       "hashtags": [
         {
-          "id": 1,
-          "title": "Go Out"
+          "title": "Gamer",
+          "hashtagColorFont": "#fff",
+          "hashtagBackgroundColor": "#323232"
         },
         {
-          "id": 2,
-          "title": "Beer"
+          "title": "PC",
+          "hashtagColorFont": "#212121",
+          "hashtagBackgroundColor": "#fefefe"
         },
-        {
-          "id": 3,
-          "title": "Happy hour"
-        }
+        {}
       ],
-      "hour": "22:00",
-      "available": false,
-      "hasFinished": true
-    }
-  ],
-  "hours": [
-    {
-      "hour": "00:00",
-      "available": true
+      "id": 4
     },
     {
-      "hour": "01:00",
-      "available": true
+      "title": "Farmacia",
+      "subtitle": "Comprar Naridrin",
+      "hasFinished": false,
+      "hashtags": [
+        {
+          "title": "Health",
+          "hashtagColorFont": "#fefefe",
+          "hashtagBackgroundColor": "#323232"
+        },
+        {
+          "title": "Sick",
+          "hashtagColorFont": "#fff",
+          "hashtagBackgroundColor": "#081c15"
+        },
+        {}
+      ],
+      "id": 5
     },
     {
-      "hour": "02:00",
-      "available": true
-    },
-    {
-      "hour": "03:00",
-      "available": true
-    },
-    {
-      "hour": "04:00",
-      "available": true
-    },
-    {
-      "hour": "05:00",
-      "available": true
-    },
-    {
-      "hour": "06:00",
-      "available": true
-    },
-    {
-      "hour": "07:00",
-      "available": true
-    },
-    {
-      "hour": "08:00",
-      "available": true
-    },
-    {
-      "hour": "09:00",
-      "available": true
-    },
-    {
-      "hour": "10:00",
-      "available": true
-    },
-    {
-      "hour": "11:00",
-      "available": true
-    },
-    {
-      "hour": "12:00",
-      "available": true
-    },
-    {
-      "hour": "13:00",
-      "available": true
-    },
-    {
-      "hour": "14:00",
-      "available": true
-    },
-    {
-      "hour": "15:00",
-      "available": true
-    },
-    {
-      "hour": "16:00",
-      "available": true
-    },
-    {
-      "hour": "17:00",
-      "available": true
-    },
-    {
-      "hour": "18:00",
-      "available": true
-    },
-    {
-      "hour": "19:00",
-      "available": true
-    },
-    {
-      "hour": "20:00",
-      "available": true
-    },
-    {
-      "hour": "21:00",
-      "available": true
-    },
-    {
-      "hour": "22:00",
-      "available": true
-    },
-    {
-      "hour": "23:00",
-      "available": true
+      "title": "Eduardo",
+      "subtitle": "Teste",
+      "hasFinished": false,
+      "hashtags": [
+        {
+          "title": "",
+          "hashtagColorFont": "",
+          "hashtagBackgroundColor": ""
+        },
+        {},
+        {}
+      ],
+      "id": 6
     }
   ]
 }

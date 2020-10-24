@@ -3,12 +3,6 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
 `;
 
-export const HoursText = styled.Text`
-  font-size: 16px;
-  font-weight: 500;
-  color: #212529;
-`;
-
 export const TodoCard = styled.View`
   display: flex;
   flex-direction: row;
@@ -37,17 +31,6 @@ export const TodoSubtitle = styled.Text`
 export const HashtagContainer = styled.View`
   flex-direction: row;
   display: flex;
-`;
-
-export const TaskHourContent = styled.View`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 2;
-  top: 4;
-  padding: 15px;
 `;
 
 export const TaskInformationContent = styled.View`
