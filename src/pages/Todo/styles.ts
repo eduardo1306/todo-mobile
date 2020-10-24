@@ -47,4 +47,8 @@ export const ProgressStatisticText = styled.Text`
   color: #f1faee;
 `;
 
+export const TodoList = styled.FlatList`
+
+`;
+
 

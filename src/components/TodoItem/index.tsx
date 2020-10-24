@@ -10,7 +10,7 @@ import {
    TodoTitle,
    HashtagContainer,
    TaskHourContent,
-   TaskInformationContent
+   TaskInformationContent,
 } from './styles';
 
 import RightActions from '../../actions/RightActions';

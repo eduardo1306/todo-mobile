@@ -1,7 +1,15 @@
 import React from 'react'
 
 import Header from '../../components/Header';
-import { Container, AppTitle, ProgressCard, ProgressTitle, ProgressStatisticText, ProgressStatistic, ProgressStatisticContent } from './styles';
+import {
+  Container,
+  AppTitle,
+  ProgressCard,
+  ProgressTitle,
+  ProgressStatisticText,
+  ProgressStatistic,
+  ProgressStatisticContent,
+} from './styles';
 import TodoItem from '../../components/TodoItem';
 
 const Todo: React.FC = () => {
