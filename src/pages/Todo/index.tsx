@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
 import Header from '../../components/Header';
 import {
@@ -35,6 +35,13 @@ const Todo: React.FC = () => {
       .then(response => setTodos(response.data));
   }, []);
 
+  const handleDeleteTodo = useCallback((todoId: number) => {
+    api.delete(`/todo/${todoId}`).then(() => {
+      setTodos(todos.filter(todo => todo.id !== todoId))
+    });
+
+  }, []);
+
   const handleHasFinishedTasks = useMemo((): JSX.Element => {
     if(todos){
       const finishTasks = todos.filter(todo => todo.hasFinished);
@@ -56,7 +63,7 @@ const Todo: React.FC = () => {
       return (
         <ProgressStatisticText>
           You don't have task's today!
-          </ProgressStatisticText>
+        </ProgressStatisticText>
       );
     }
   }, [])
