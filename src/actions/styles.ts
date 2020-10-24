@@ -35,7 +35,7 @@ export function useStyles() {
       width: 60,
       borderRadius: 8,
       color: '#f1faee',
-      backgroundColor: '#04f4bb'
+      backgroundColor: '#06d6a0'
     }
   });
 

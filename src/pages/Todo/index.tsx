@@ -2,7 +2,7 @@ import React from 'react'
 
 import Header from '../../components/Header';
 import { Container, AppTitle, ProgressCard, ProgressTitle, ProgressStatisticText, ProgressStatistic, ProgressStatisticContent } from './styles';
-import TodoItem from './TodoItem';
+import TodoItem from '../../components/TodoItem';
 
 const Todo: React.FC = () => {
   return (
@@ -20,7 +20,7 @@ const Todo: React.FC = () => {
             11/24
           </ProgressStatistic>
           <ProgressStatisticText>
-          {" "}takes done
+          {" - "}takes done
           </ProgressStatisticText>
         </ProgressStatisticContent>
       </ProgressCard>
