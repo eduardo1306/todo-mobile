@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Todo from './pages/Todo';
+import CreateTodo from './pages/CreateTodo';
 
 const Stack = createStackNavigator();
 
@@ -13,6 +14,10 @@ const Routes: React.FC = () => {
         <Stack.Screen
           name="Todo"
           component={Todo}
+        />
+        <Stack.Screen
+          name="CreateTodo"
+          component={CreateTodo}
         />
       </Stack.Navigator>
     </NavigationContainer>
