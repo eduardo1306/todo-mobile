@@ -16,7 +16,13 @@ import {
 import RightActions from '../../actions/RightActions';
 import TodoHashtag from '../TodoHashtag';
 
-const TodoItem: React.FC = () => {
+import { ITodo } from '../../pages/Todo';
+
+interface ITodoItemProps {
+  todo: ITodo;
+}
+
+const TodoItem: React.FC<ITodoItemProps> = ({ todo }) => {
   return (
     <Container>
       <Swipeable renderRightActions={
@@ -24,29 +30,21 @@ const TodoItem: React.FC = () => {
       >
         <TodoCard>
           <TaskInformationContent>
-            <TodoTitle>UX Design Sprint</TodoTitle>
-            <TodoSubtitle>Sprint de UX com o time</TodoSubtitle>
+            <TodoTitle>{todo.title}</TodoTitle>
+            <TodoSubtitle>{todo.subtitle}</TodoSubtitle>
             <HashtagContainer>
+            {todo.hashtags.map(item => (
               <TodoHashtag
-                title='UI/UX'
+                key={item.id}
+                title={item.title}
               />
-              <TodoHashtag
-                title='Frontend'
-                backgroundColorHex='#caf0f8'
-                textColorHex='#e63946'
-              />
-              <TodoHashtag
-                title='Mobile'
-                backgroundColorHex='#2a9d8f'
-                textColorHex='#03071e'
-              />
+            ))}
             </HashtagContainer>
           </TaskInformationContent>
           <TaskHourContent>
             <AntDesign name="clockcircleo" size={27} color="#212529" />
-            <HoursText>{" - "}08:00</HoursText>
+            <HoursText>{" - "}{todo.hour}</HoursText>
           </TaskHourContent>
-
         </TodoCard>
       </Swipeable>
     </Container>

@@ -1,4 +1,7 @@
 import styled from 'styled-components/native';
+import { FlatList } from 'react-native';
+
+import { ITodo } from './index';
 
 export const Container = styled.View`
   flex: 1;
@@ -47,7 +50,7 @@ export const ProgressStatisticText = styled.Text`
   color: #f1faee;
 `;
 
-export const TodoList = styled.FlatList`
+export const TodoList = styled(FlatList as new () => FlatList<ITodo>)`
 
 `;
 
