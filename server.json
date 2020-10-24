@@ -53,5 +53,103 @@
         }
       ]
     }
+  ],
+  "hours": [
+    {
+      "hour": "00:00",
+      "available": true
+    },
+    {
+      "hour": "01:00",
+      "available": true
+    },
+    {
+      "hour": "02:00",
+      "available": true
+    },
+    {
+      "hour": "03:00",
+      "available": true
+    },
+    {
+      "hour": "04:00",
+      "available": true
+    },
+    {
+      "hour": "05:00",
+      "available": true
+    },
+    {
+      "hour": "06:00",
+      "available": true
+    },
+    {
+      "hour": "07:00",
+      "available": true
+    },
+    {
+      "hour": "08:00",
+      "available": true
+    },
+    {
+      "hour": "09:00",
+      "available": true
+    },
+    {
+      "hour": "10:00",
+      "available": true
+    },
+    {
+      "hour": "11:00",
+      "available": true
+    },
+    {
+      "hour": "12:00",
+      "available": true
+    },
+    {
+      "hour": "13:00",
+      "available": true
+    },
+    {
+      "hour": "14:00",
+      "available": true
+    },
+    {
+      "hour": "15:00",
+      "available": true
+    },
+    {
+      "hour": "16:00",
+      "available": true
+    },
+    {
+      "hour": "17:00",
+      "available": true
+    },
+    {
+      "hour": "18:00",
+      "available": true
+    },
+    {
+      "hour": "19:00",
+      "available": true
+    },
+    {
+      "hour": "20:00",
+      "available": true
+    },
+    {
+      "hour": "21:00",
+      "available": true
+    },
+    {
+      "hour": "22:00",
+      "available": true
+    },
+    {
+      "hour": "23:00",
+      "available": true
+    }
   ]
 }
