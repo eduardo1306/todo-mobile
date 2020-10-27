@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import AsyncStorage from '@react-native-community/async-storage';
 
 import {
   Container,
@@ -34,13 +33,19 @@ export interface ITodo {
   hasFinished: boolean;
 }
 
+interface ITasksStatus {
+  id: number;
+  hasFinished: boolean;
+}
+
 const Todo: React.FC = () => {
-  const { navigate, setParams } = useNavigation();
+  const { navigate } = useNavigation();
 
   const [todos, setTodos] = useState<ITodo[]>([]);
 
   useEffect(() => {
-    api.get('/todo').then(response => setTodos(response.data));
+    api.get('/todo')
+      .then(response => setTodos(response.data));
   }, []);
 
 
@@ -48,10 +53,22 @@ const Todo: React.FC = () => {
     navigate('CreateTodo');
   }, [navigate]);
 
+  const handleDeleteTodo = useCallback(async (todoId: number) => {
+    await api.delete(`/todo/${todoId}`);
+
+    setTodos(todos.filter(todo => todo.id !== todoId));
+
+  }, []);
+
   const handleHasFinishedTasks = useMemo((): JSX.Element => {
     if(todos.length > 0){
-      const finishedTasks = todos.filter(todo => todo.hasFinished);
-      const unfinishedTasks = todos.filter(todo => !todo.hasFinished);
+      const finishedTasks = todos.filter(
+        todo => todo.hasFinished
+      );
+
+      const unfinishedTasks = todos.filter(
+        todo => todo.hasFinished === false
+      );
 
       const taskStatisticText = `${finishedTasks.length <= 0 ? 0 : finishedTasks.length + 1}/${unfinishedTasks.length <= 0 ? 0 : unfinishedTasks.length + 1}`;
 
@@ -72,7 +89,7 @@ const Todo: React.FC = () => {
         </ProgressStatisticText>
       );
     }
-  }, [todos])
+  }, [todos]);
 
   return (
     <Container>
@@ -100,6 +117,7 @@ const Todo: React.FC = () => {
         renderItem={({ item: todo }) => (
           <TodoItem
             todo={todo}
+            handleDeleteTodo={handleDeleteTodo}
           />
         )}
       />

@@ -7,9 +7,11 @@ import { useStyles, Container, AddTodoButton, DeleteTodoButton } from './styles'
 interface IAnimatedProps {
   progress: Animated.AnimatedInterpolation,
   dragX: Animated.AnimatedInterpolation,
+  handleDeleteTodo: (todoId: number) => void;
+  todoId: number;
 }
 
-const RightActions = ({ progress, dragX }: IAnimatedProps) => {
+const RightActions = ({ progress, dragX, handleDeleteTodo, todoId }: IAnimatedProps) => {
   const styles = useStyles();
   const scale = dragX.interpolate({
     inputRange: [-100, 0],
@@ -30,7 +32,9 @@ const RightActions = ({ progress, dragX }: IAnimatedProps) => {
           <AntDesign name="checkcircle" size={24} color="black" />
         </Animated.View>
       </AddTodoButton>
-      <DeleteTodoButton>
+      <DeleteTodoButton
+        onPress={() => handleDeleteTodo(todoId)}
+      >
         <Animated.View style={
           [
             styles.deleteTodoContent,

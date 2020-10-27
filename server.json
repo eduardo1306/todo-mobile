@@ -1,123 +1,50 @@
 {
   "todo": [
     {
-      "id": 1,
-      "title": "UI/UX reunion",
-      "subtitle": "Color palletes and prototype for mobile app",
+      "title": "Ir no mercado",
+      "subtitle": "comprar açucar",
       "hasFinished": false,
       "hashtags": [
         {
-          "id": 1,
-          "title": "UI/UX"
+          "title": "Supermarket",
+          "hashtagColorFont": "#03045e",
+          "hashtagBackgroundColor": "#caf0f8"
         },
         {
-          "id": 2,
-          "title": "Mobile"
-        },
-        {
-          "id": 3,
-          "title": "Design"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "Supermarket",
-      "subtitle": "Buy chocolates",
-      "hasFinished": false,
-      "hashtags": [
-        {
-          "id": 1,
-          "title": "Market",
-          "hashtagColorFont": "#e9c46a",
-          "hashtagBackgroundColor": "#e63946"
-        },
-        {
-          "id": 2,
           "title": "Food",
-          "hashtagColorFont": "#f1faee",
-          "hashtagBackgroundColor": "#f77f00"
+          "hashtagColorFont": "#e63946",
+          "hashtagBackgroundColor": "#1d3557"
         },
         {
-          "id": 3,
-          "title": "Junk Food",
-          "hashtagColorFont": "#8d99ae",
-          "hashtagBackgroundColor": "#ef233c"
+          "title": "Sugar",
+          "hashtagColorFont": "#e9c46a",
+          "hashtagBackgroundColor": "#264653"
         }
-      ]
+      ],
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "Run on the beach",
-      "subtitle": "Run 5 kilometers",
-      "hasFinished": false,
-      "hashtags": [
-        {
-          "id": 1,
-          "title": "Sport",
-          "hashtagColorFont": "#caf0f8",
-          "hashtagBackgroundColor": "#03045e"
-        },
-        {
-          "id": 2,
-          "title": "Health",
-          "hashtagColorFont": "#3d405b",
-          "hashtagBackgroundColor": "#f2cc8f"
-        }
-      ]
-    },
-    {
-      "title": "Jogar",
-      "subtitle": "50 minutos de CS",
+      "title": "Jogar Dota2 com os amigos",
+      "subtitle": "jogar umas duas partidas",
       "hasFinished": false,
       "hashtags": [
         {
           "title": "Gamer",
-          "hashtagColorFont": "#fff",
-          "hashtagBackgroundColor": "#323232"
+          "hashtagColorFont": "#80ffdb",
+          "hashtagBackgroundColor": "#7400b8"
         },
         {
           "title": "PC",
-          "hashtagColorFont": "#212121",
-          "hashtagBackgroundColor": "#fefefe"
-        },
-        {}
-      ],
-      "id": 4
-    },
-    {
-      "title": "Farmacia",
-      "subtitle": "Comprar Naridrin",
-      "hasFinished": false,
-      "hashtags": [
-        {
-          "title": "Health",
-          "hashtagColorFont": "#fefefe",
-          "hashtagBackgroundColor": "#323232"
+          "hashtagColorFont": "#e0fbfc",
+          "hashtagBackgroundColor": "#ee6c4d"
         },
         {
-          "title": "Sick",
-          "hashtagColorFont": "#fff",
-          "hashtagBackgroundColor": "#081c15"
-        },
-        {}
+          "title": "Steam",
+          "hashtagColorFont": "#f7fff7",
+          "hashtagBackgroundColor": "#4ecdc4"
+        }
       ],
-      "id": 5
-    },
-    {
-      "title": "Eduardo",
-      "subtitle": "Teste",
-      "hasFinished": false,
-      "hashtags": [
-        {
-          "title": "",
-          "hashtagColorFont": "",
-          "hashtagBackgroundColor": ""
-        },
-        {},
-        {}
-      ],
-      "id": 6
+      "id": 3
     }
   ]
 }

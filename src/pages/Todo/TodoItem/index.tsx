@@ -17,22 +17,24 @@ import { ITodo } from '../index';
 
 interface ITodoItemProps {
   todo: ITodo;
+  handleDeleteTodo: (todoId: number) => void;
 }
 
-const TodoItem: React.FC<ITodoItemProps> = ({ todo }) => {
+const TodoItem: React.FC<ITodoItemProps> = ({ todo, handleDeleteTodo }) => {
   return (
     <Container>
-      <Swipeable renderRightActions={
-        (progress, dragX) => <RightActions dragX={dragX} progress={progress} />}
+      <Swipeable
+        renderRightActions={
+        (progress, dragX) => <RightActions todoId={todo.id} handleDeleteTodo={handleDeleteTodo} dragX={dragX} progress={progress} />}
       >
         <TodoCard>
           <TaskInformationContent>
             <TodoTitle>{todo.title}</TodoTitle>
             <TodoSubtitle>{todo.subtitle}</TodoSubtitle>
             <HashtagContainer>
-            {todo.hashtags.map(item => (
+            {todo.hashtags?.map(item => (
               <TodoHashtag
-                key={item.id}
+                key={(Math.random() * todo.id) * 100}
                 title={item.title}
                 backgroundColorHex={item.hashtagBackgroundColor}
                 textColorHex={item.hashtagColorFont}

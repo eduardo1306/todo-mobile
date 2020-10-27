@@ -27,7 +27,7 @@ interface CreateTodoData {
 }
 
 const CreateTodo: React.FC = () => {
-  const { goBack } = useNavigation();
+  const { navigate } = useNavigation();
   const [screeHeight, setScreenHeight] = useState(0);
 
   const formRef = useRef<FormHandles>(null);
@@ -75,14 +75,14 @@ const CreateTodo: React.FC = () => {
         ]
       };
 
-      await api.post('/todo', data).then(() => {
-        Alert.alert(
-          'Todo created!',
-          'Your todo has been created. Check on Task Manager.'
-        );
-      });
+      await api.post('/todo', data);
 
-      goBack();
+      Alert.alert(
+        'Todo created!',
+        'Your todo has been created. Check on Task Manager.'
+      );
+
+      navigate('Todo');
 
     } catch(err) {
       Alert.alert(
@@ -93,8 +93,8 @@ const CreateTodo: React.FC = () => {
   }, []);
 
   const handleNavigateBack = useCallback(() => {
-    goBack();
-  }, [goBack]);
+    navigate('Todo');
+  }, [navigate]);
 
   const scrollEnabled = Dimensions.get('window').height < screeHeight;
 
